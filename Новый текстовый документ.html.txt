@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ООО «СЕКРЕТ УСПЕХА» – юридическое сопровождение бизнеса</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ООО «СЕКРЕТ УСПЕХА» – юридические услуги, сопровождение государственных закупок и комплексное сопровождение бизнеса в Санкт-Петербурге.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 60px 20px 50px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fff;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #d1d5db;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid #374151;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: #f97316;
+      color: #111827;
+      border-color: #f97316;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #fb923c;
+      border-color: #fb923c;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: #4b5563;
+    }
+
+    .btn-outline:hover {
+      background: #111827;
+    }
+
+    .hero-director {
+      flex: 0 0 260px;
+      max-width: 260px;
+      background: #111827;
+      border-radius: 24px;
+      padding: 18px 18px 22px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+      border: 1px solid #4b5563;
+    }
+
+    .hero-director img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .director-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .director-role {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .director-note {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 30px 24px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border-radius: 18px;
+      padding: 18px 16px;
+      border: 1px solid #e5e7eb;
+      font-size: 14px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      flex: 1 1 140px;
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contacts-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .contacts-list p {
+      margin-bottom: 8px;
+    }
+
+    .contacts-list a {
+      color: #111827;
+      text-decoration: none;
+      border-bottom: 1px dashed #9ca3af;
+    }
+
+    .contacts-list a:hover {
+      border-bottom-style: solid;
+    }
+
+    .map-placeholder {
+      background: #f3f4f6;
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px dashed #d1d5db;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 14px 16px;
+      }
+
+      .hero {
+        padding: 40px 16px 32px;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ООО «СЕКРЕТ УСПЕХА»</div>
+  <nav>
+    <a href="#about">О компании</a>
+    <a href="#services">Услуги</a>
+    <a href="#advantages">Преимущества</a>
+    <a href="#tenders">Госзакупки</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-title">Юридическое сопровождение бизнеса и государственных закупок</h1>
+      <p class="hero-subtitle">
+        Помогаем компаниям работать законно, безопасно и эффективно: от правового аудита до сопровождения
+        контрактов по 44-ФЗ и 223-ФЗ.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">Санкт-Петербург</span>
+        <span class="badge">Деятельность в области права</span>
+        <span class="badge">Участие в госзакупках</span>
+      </div>
+      <div class="hero-cta">
+        <a href="tel:+79218610849" class="btn-primary">Позвонить: +7 (921) 861-08-49</a>
+        <a href="mailto:antocha76@mail.ru" class="btn-outline">Написать на e-mail</a>
+      </div>
+    </div>
+
+    <aside class="hero-director">
+      <!-- Замените src на путь к улучшенной фотографии генерального директора -->
+      <img src="director.jpg" alt="Генеральный директор ООО «СЕКРЕТ УСПЕХА»">
+      <div class="director-name">Павловский Антон Юрьевич</div>
+      <div class="director-role">Генеральный директор, учредитель</div>
+      <div class="director-note">
+        Личный контроль ключевых проектов, акцент на практическом результате и минимизации правовых рисков.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <section id="about">
+    <h2>О компании</h2>
+    <p class="section-subtitle">
+      Общество с ограниченной ответственностью «СЕКРЕТ УСПЕХА» зарегистрировано в 2020 году в Санкт-Петербурге и
+      специализируется на юридическом сопровождении бизнеса, участии в государственных закупках и комплексных
+      консультациях по правовым и финансовым вопросам.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Для кого мы работаем</h3>
+        <p class="tagline">
+          Малый и средний бизнес, компании-поставщики по государственным контрактам, индивидуальные предприниматели.
+        </p>
+        <ul>
+          <li>Организации, участвующие в конкурсах и аукционах;</li>
+          <li>Коммерческие компании, которым нужен «внешний юридический отдел»;</li>
+          <li>Стартапы и проекты на этапе запуска.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Направления деятельности</h3>
+        <ul>
+          <li>Договорная и претензионная работа;</li>
+          <li>Сопровождение участия в тендерах и госзакупках;</li>
+          <li>Юридический аудит, правовая экспертиза документов;</li>
+          <li>Консультирование руководителей и собственников.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-value">2020</div>
+        <div>год регистрации компании</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">53 млн ₽</div>
+        <div>общий объем государственных контрактов в статусе поставщика</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">28</div>
+        <div>заключенных контрактов с государственными заказчиками</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Услуги</h2>
+    <p class="section-subtitle">
+      Мы берем на себя рутину и сложные юридические вопросы, чтобы вы могли сосредоточиться на развитии бизнеса.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Юридическое сопровождение бизнеса</h3>
+        <ul>
+          <li>Разработка и экспертиза договоров (поставки, оказания услуг, аренды и др.);</li>
+          <li>Претензионная работа и досудебное урегулирование споров;</li>
+          <li>Сопровождение арбитражных процессов через партнерские судебные команды;</li>
+          <li>Консультации по налоговым и корпоративным вопросам.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Госзакупки и контракты</h3>
+        <ul>
+          <li>Анализ документации и подбор тендеров под ваш профиль;</li>
+          <li>Подготовка и подача заявок на участие в закупках;</li>
+          <li>Сопровождение исполнения контрактов, переписка с заказчиком;</li>
+          <li>Оценка рисков и помощь в защите интересов поставщика.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Консалтинг и специализированные услуги</h3>
+        <ul>
+          <li>Комплексная правовая диагностика бизнеса;</li>
+          <li>Построение внутренней договорной и претензионной политики;</li>
+          <li>Обучающие консультации для руководителей и сотрудников;</li>
+          <li>Сопутствующий консалтинг по вопросам учета и отчетности.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Поддержка «по запросу»</h3>
+        <ul>
+          <li>Разовые консультации по конкретным ситуациям;</li>
+          <li>Подготовка правовых заключений и отзывов;</li>
+          <li>Экспресс-анализ рисков по сделкам и контрактам.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="advantages">
+    <h2>Почему с нами надежно</h2>
+    <p class="section-subtitle">
+      Мы ориентируемся не только на букву закона, но и на практический результат для бизнеса.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Благонадежность и прозрачность</h3>
+        <ul>
+          <li>Компания действует с 2020 года и имеет статус действующей организации;</li>
+          <li>Участие в десятках государственных контрактов без включения в реестр недобросовестных поставщиков;</li>
+          <li>Открытая отчетность и работа в рамках действующего законодательства.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Личная ответственность руководителя</h3>
+        <ul>
+          <li>Генеральный директор является единственным учредителем и контролирует ключевые проекты;</li>
+          <li>Минимальное количество бюрократии, быстрые согласования;</li>
+          <li>Фокус на долгосрочном сотрудничестве, а не на разовых сделках.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tenders">
+    <h2>Опыт в государственных закупках</h2>
+    <p class="section-subtitle">
+      ООО «СЕКРЕТ УСПЕХА» имеет опыт работы с государственными заказчиками, что подтверждается десятками контрактов
+      и стабильной деловой репутацией.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Что мы предлагаем</h3>
+        <ul>
+          <li>Полное сопровождение участия в аукционах и конкурсах;</li>
+          <li>Анализ требований заказчика и подготовка документов;</li>
+          <li>Оценка рисков и выбор оптимальной стратегии участия;</li>
+          <li>Сопровождение исполнения контрактов и взаимодействия с контролирующими органами.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Ваш результат</h3>
+        <ul>
+          <li>Снижение рисков отклонения заявок;</li>
+          <li>Защита интересов на всех этапах закупки;</li>
+          <li>Сокращение нагрузки на собственных сотрудников;</li>
+          <li>Повышение шансов на победу и успешное исполнение контрактов.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <p class="section-subtitle">
+      Свяжитесь с нами удобным для вас способом. Проведем первичную консультацию и предложим формат сотрудничества
+      под ваши задачи.
+    </p>
+    <div class="contacts-wrap">
+      <div class="contacts-list">
+        <p><strong>Телефон:</strong> <a href="tel:+79218610849">+7 (921) 861-08-49</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:antocha76@mail.ru">antocha76@mail.ru</a></p>
+        <p><strong>Адрес:</strong><br>
+          191180, Россия, г. Санкт-Петербург,<br>
+          пер. Большой Казачий, д. 11, лит. А
+        </p>
+        <p><strong>Реквизиты:</strong><br>
+          ОГРН 1207800150568<br>
+          ИНН 7838093630<br>
+          КПП 783801001
+        </p>
+      </div>
+      <div class="map-placeholder">
+        Здесь можно разместить карту с Яндекс.Карт или Google Maps<br><br>
+        Например, с помощью конструктора карты:<br>
+        – создайте карту с меткой на адресе компании;<br>
+        – получите HTML-код iframe;<br>
+        – вставьте его вместо этого блока.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © ООО «СЕКРЕТ УСПЕХА», 2020–2025. Все права защищены.
+</footer>
+
+</body>
+</html>
